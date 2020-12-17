@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
   <head>
     <!-- Title -->
     <title >Wantravel</title>
@@ -18,8 +18,6 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/magnific-popup.css">
-
-    <link rel="stylesheet" href="css/aos.css">
 
     <link rel="stylesheet" href="css/ionicons.min.css">
 
@@ -45,7 +43,6 @@
           <li class="nav-item"><a href="/" class="nav-link">หน้าหลัก</a></li>
           <li class="nav-item active"><a href="travel" class="nav-link">ท่องเที่ยว</a></li>
           <li class="nav-item"><a href="covid" class="nav-link">Covid - 19</a></li>
-          <li class="nav-item"><a href="gallery" class="nav-link">แกลเลอรี่</a></li>
           <li class="nav-item"><a href="contact" class="nav-link">ติดต่อ</a></li>
           <li class="nav-item cta"><a href="login" class="nav-link"><span>เข้าสู่ระบบ</span></a></li>
         </ul>
@@ -73,7 +70,7 @@
         	<div class="col-lg-3 sidebar ftco-animate">
         		<div class="sidebar-wrap bg-light ftco-animate">
         			<h3 class="heading mb-4">ค้นหาสื่งที่คุณสนใจ</h3>
-        			<form action="#" method="get">
+        			<form action="travel" method="get">
         				<div class="fields">
 		              <div class="form-group">
 		                <input type="text" id="keyword" name='keyword' class="form-control" placeholder="ค้นหาที่นี่">
@@ -81,9 +78,8 @@
 		              <div class="form-group">
 		                <div class="select-wrap one-third">
 	                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-						<select name="destination" id="destination" class="form-control">
-							<option value="ทั้งหมด">ทั้งหมด</option>
-							<option value="กรุงเทพมหานคร">กรุงเทพมหานคร</option>
+						<select id="destination" name="destination" class="form-control">
+							<option value="กรุงเทพมหานคร" selected>กรุงเทพมหานคร</option>
 							<option value="อำนาจเจริญ">อำนาจเจริญ</option>
 							<option value="อ่างทอง">อ่างทอง</option>
 							<option value="บึงกาฬ">บึงกาฬ</option>
@@ -167,10 +163,10 @@
 		                <div class="select-wrap one-third">
 	                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
 						<select name="catagory" id="catagory" class="form-control">
-							<option value="ทั้งหมด">ทั้งหมด</option>
-							<option value="สถานที่ท่องเที่ยว">สถานที่ท่องเที่ยว</option>
-							<option value="ร้านอาหาร">ร้านอาหาร</option>
-							<option value="ช้อปปิ้ง">ช้อปปิ้ง</option>
+							<option value="ALL">ทั้งหมด</option>
+							<option value="ATTRACTION">สถานที่ท่องเที่ยว</option>
+							<option value="RESTAURANT">ร้านอาหาร</option>
+							<option value="SHOP">ช้อปปิ้ง</option>
 	                    </select>
 	                  </div>
 		              </div>
@@ -184,21 +180,21 @@
           <div class="col-lg-9">
           	<div class="row">
           		<div class="col-md-4 ftco-animate">
-		    				<div class="destination">
-								<a id="03" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(https://tatapi.tourismthailand.org/tatfs/IMAGE/CustomPOI/Picture/P06000094_1.jpg);" alt="">
-		    						<div class="icon d-flex justify-content-center align-items-center">
-									<span class="icon-search2"></span>
-    						</div>
+					<div class="destination">
+						<a id="03" href="" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(https://tatapi.tourismthailand.org/tatfs/Image/CustomPOI/Picture/P03013181_1.jpeg);">
+							<div class="icon d-flex justify-content-center align-items-center">
+								<span class="icon-search2"></span>
+							</div>
 		    					</a>
 		    					<div class="text p-3">
 		    						<div class="d-flex">
 		    							<div class="one">
-				    						<h3><a id="01" href="/">ตลาดกลางคืน เยาวราช</a></h3>
+				    						<h3><a id="01" href="/"></a></h3>
 			    						</div>
 									</div>
 									<hr>
 		    						<p class="bottom-area d-flex">
-		    							<span id="02" ><i class="icon-map-o"></i> กรุงเทพมหานคร</span> 
+		    							<span id="02" ><i class="icon-map-o"></i> </span> 
 		    							<span class="ml-auto"><a id="04" href="/">รายละเอียด</a></span>
 		    						</p>
 		    					</div>
@@ -206,109 +202,131 @@
 		    			</div>
 		    			<div class="col-md-4 ftco-animate">
 		    				<div class="destination">
-		    					<a id="13" href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(https://tatapi.tourismthailand.org/tatfs/IMAGE/CustomPOI/Picture/P06000094_1.jpg);" alt="">
-		    						<div class="icon d-flex justify-content-center align-items-center">
-    							<span class="icon-search2"></span>
-    						</div>
+								<a id="13" href="hotel-single.html" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(https://tatapi.tourismthailand.org/tatfs/Image/CustomPOI/Picture/P03013330_1.jpeg);">
+									<div class="icon d-flex justify-content-center align-items-center">
+								<span class="icon-search2"></span>
+							</div>
 		    					</a>
 		    					<div class="text p-3">
 		    						<div class="d-flex">
 		    							<div class="one">
-				    						<h3><a id="11" href="#">ตลาดนัดสวนจตุจักร</a></h3>
+				    						<h3><a id="11" href="#">พระตำหนักภูพิงคราชนิเวศน์</a></h3>
 			    						</div>
 									</div>
-									<hr>
+		    						<hr>
 		    						<p class="bottom-area d-flex">
-		    							<span id="12" ><i class="icon-map-o"></i> กรุงเทพมหานคร</span> 
-		    							<span class="ml-auto"><a id="04" href="/">รายละเอียด</a></span>
+		    							<span id="12" ><i class="icon-map-o"></i> </span> 
+		    							<span class="ml-auto"><a id="14" href="/">รายละเอียด</a></span>
 		    						</p>
 		    					</div>
 		    				</div>
 		    			</div>
 		    			<div class="col-md-4 ftco-animate">
 		    				<div class="destination">
-		    					<a id="23" href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(https://tatapi.tourismthailand.org/tatfs/Image/CustomPOI/Picture/P03007495_1.jpeg);" alt="">
-		    						<div class="icon d-flex justify-content-center align-items-center">
-    							<span class="icon-search2"></span>
-    						</div>
+								<a id="23" href="hotel-single.html" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(https://tatapi.tourismthailand.org/tatfs/Image/CustomPOI/Picture/P03004793_1.jpeg);">
+									<div class="icon d-flex justify-content-center align-items-center">
+								<span class="icon-search2"></span>
+							</div>
 		    					</a>
 		    					<div class="text p-3">
 		    						<div class="d-flex">
 		    							<div class="one">
-				    						<h3><a id="21" href="#">เสาชิงช้า</a></h3>
+				    						<h3><a id="21" href="#">ตลาดนัดสวนจตุจักร</a></h3>
 			    						</div>
 									</div>
 									<hr>
 		    						<p class="bottom-area d-flex">
 		    							<span id="22" ><i class="icon-map-o"></i> กรุงเทพมหานคร</span> 
-		    							<span class="ml-auto"><a id="04" href="/">รายละเอียด</a></span>
+		    							<span class="ml-auto"><a id="24" href="/">รายละเอียด</a></span>
 		    						</p>
 		    					</div>
 		    				</div>
 		    			</div>
 		    			<div class="col-md-4 ftco-animate">
 		    				<div class="destination">
-		    					<a id="33" href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(https://tatapi.tourismthailand.org/tatfs/Image/CustomPOI/Picture/P03013834_1.jpeg);" alt="">
-		    						<div class="icon d-flex justify-content-center align-items-center">
-    							<span class="icon-search2"></span>
-    						</div>
+								<a id="33" href="hotel-single.html" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(https://tatapi.tourismthailand.org/tatfs/image/CustomPOI/Picture/P03009076_1.jpeg);">
+									<div class="icon d-flex justify-content-center align-items-center">
+								<span class="icon-search2"></span>
+							</div>
 		    					</a>
 		    					<div class="text p-3">
 		    						<div class="d-flex">
 		    							<div class="one">
-				    						<h3><a id="31" href="#">ตึกใบหยกสกาย</a></h3>
+				    						<h3><a id="31" href="#">ตลาดนัดสวนจตุจักร</a></h3>
 			    						</div>
 									</div>
 									<hr>
 		    						<p class="bottom-area d-flex">
 		    							<span id="32" ><i class="icon-map-o"></i> กรุงเทพมหานคร</span> 
-		    							<span class="ml-auto"><a id="04" href="/">รายละเอียด</a></span>
+		    							<span class="ml-auto"><a id="34" href="/">รายละเอียด</a></span>
 		    						</p>
 		    					</div>
 		    				</div>
 		    			</div>
 		    			<div class="col-md-4 ftco-animate">
 		    				<div class="destination">
-		    					<a id="43" href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(https://tatapi.tourismthailand.org/tatfs/IMAGE/CustomPOI/Picture/P03013230_pic1.jpg);" alt="">
-		    						<div class="icon d-flex justify-content-center align-items-center">
-    							<span class="icon-search2"></span>
-    						</div>
+								<a id="43" href="hotel-single.html" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(https://tatapi.tourismthailand.org/tatfs/Image/CustomPOI/Picture/P03005512_1.jpeg);">
+									<div class="icon d-flex justify-content-center align-items-center">
+								<span class="icon-search2"></span>
+							</div>
 		    					</a>
 		    					<div class="text p-3">
 		    						<div class="d-flex">
 		    							<div class="one">
-				    						<h3><a id="41" href="#">อนุสาวรีย์ชัยสมรภูมิ</a></h3>
+				    						<h3><a id="41" href="#">ตลาดนัดสวนจตุจักร</a></h3>
 			    						</div>
 									</div>
 									<hr>
 		    						<p class="bottom-area d-flex">
 		    							<span id="42" ><i class="icon-map-o"></i> กรุงเทพมหานคร</span> 
-		    							<span class="ml-auto"><a id="04" href="/">รายละเอียด</a></span>
+		    							<span class="ml-auto"><a id="44" href="/">รายละเอียด</a></span>
 		    						</p>
 		    					</div>
 		    				</div>
 		    			</div>
 		    			<div class="col-md-4 ftco-animate">
 		    				<div class="destination">
-		    					<a id="53" href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(https://tatapi.tourismthailand.org/tatfs/Image/CustomPOI/Picture/P03013218_1.jpeg);" alt="">
-		    						<div class="icon d-flex justify-content-center align-items-center">
-    							<span class="icon-search2"></span>
-    						</div>
+								<a id="53" href="" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(https://tatapi.tourismthailand.org/tatfs/Image/CustomPOI/Picture/P03013330_1.jpeg);">
+									<div class="icon d-flex justify-content-center align-items-center">
+								<span class="icon-search2"></span>
+							</div>
 		    					</a>
 		    					<div class="text p-3">
 		    						<div class="d-flex">
 		    							<div class="one">
-				    						<h3><a id="51" href="#">วัดอรุณราชวรารามราชวรมหาวิหาร</a></h3>
+				    						<h3><a id="51" href="#">พระตำหนักภูพิงคราชนิเวศน์</a></h3>
 			    						</div>
 									</div>
-									<hr>
+		    						<hr>
 		    						<p class="bottom-area d-flex">
-		    							<span id="52" ><i class="icon-map-o"></i> กรุงเทพมหานคร</span> 
-		    							<span class="ml-auto"><a id="04" href="/">รายละเอียด</a></span>
+		    							<span id="52" ><i class="icon-map-o"></i> </span> 
+		    							<span class="ml-auto"><a id="54" href="/">รายละเอียด</a></span>
 		    						</p>
 		    					</div>
 		    				</div>
 		    			</div>
+						<div class="col-md-4 ftco-animate">
+		    				<div class="destination">
+								<a id="63" href="hotel-single.html" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(https://tatapi.tourismthailand.org/tatfs/Image/CustomPOI/Picture/P03012508_1.jpeg);">
+									<div class="icon d-flex justify-content-center align-items-center">
+								<span class="icon-search2"></span>
+							</div>
+		    					</a>
+		    					<div class="text p-3">
+		    						<div class="d-flex">
+		    							<div class="one">
+				    						<h3><a id="61" href="#"></a></h3>
+			    						</div>
+									</div>
+									<hr>
+		    						<p class="bottom-area d-flex">
+		    							<span id="62" ><i class="icon-map-o"></i> </span> 
+		    							<span class="ml-auto"><a id="64" href="/">รายละเอียด</a></span>
+		    						</p>
+		    					</div>
+		    				</div>
+						</div>
+						
           	</div>
           </div> <!-- .col-md-8 -->
         </div>
@@ -322,7 +340,7 @@
 			<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
   <script>document.write(new Date().getFullYear());</script> Wantravel <i class="icon-heart" aria-hidden="true"></i>
   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-		  </div>
+		  </div>	
 		</div>
 	  </div>
 	</footer>
@@ -335,8 +353,6 @@
 
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
   <script src="js/jquery.easing.1.3.js"></script>
   <script src="js/jquery.waypoints.min.js"></script>
   <script src="js/jquery.stellar.min.js"></script>
@@ -345,13 +361,9 @@
   <script src="js/aos.js"></script>
   <script src="js/jquery.animateNumber.min.js"></script>
   <script src="js/bootstrap-datepicker.js"></script>
-  <script src="js/jquery.timepicker.min.js"></script>
   <script src="js/scrollax.min.js"></script>
   <script src="js/range.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
   <script src="js/api_search.js"></script>
-    
   </body>
 </html>

@@ -34,7 +34,7 @@
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
-				<form class="login100-form validate-form">
+				<!-- <form class="login100-form validate-form" action="/"> -->
 					<span class="login100-form-title p-b-26">
 						Wantravel. <br>ยินดีต้อนรับ
 					</span>
@@ -43,7 +43,7 @@
 					</span>
 
 					<div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
-						<input class="input100" type="text" name="email">
+						<input class="input100" type="text" name="email" id="emaillogin">
 						<span class="focus-input100" data-placeholder="Email"></span>
 					</div>
 
@@ -51,14 +51,14 @@
 						<span class="btn-show-pass">
 							<i class="zmdi zmdi-eye"></i>
 						</span>
-						<input class="input100" type="password" name="pass">
+						<input class="input100" type="password" name="pass" id="passwordlogin">
 						<span class="focus-input100" data-placeholder="Password"></span>
 					</div>
 
 					<div class="container-login100-form-btn">
 						<div class="wrap-login100-form-btn">
 							<div class="login100-form-bgbtn"></div>
-							<button class="login100-form-btn">
+							<button class="login100-form-btn" id="login">
 								เข้าสู่ระบบ
 							</button>
 						</div>
@@ -79,7 +79,7 @@
 							กลับหน้าหลัก
 						</a>
 					</div>
-				</form>
+				<!-- </form> -->
 			</div>
 		</div>
 	</div>
@@ -103,6 +103,9 @@
 	<script src="vendor/countdowntime/countdowntime.js"></script>
 <!--===============================================================================================-->
 	<script src="js/mainlogin.js"></script>
-
+	<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-firestore.js"></script>
+	<script src="js/authen.js"></script>
 </body>
 </html>

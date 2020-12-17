@@ -1,30 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-
     <!-- Title -->
     <title >Wantravel</title>
     <!-- Favicon -->
     <link rel="icon" href="images/elephant.ico">
 
-    <!-- Core Stylesheet -->
-    <link href="style.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alex+Brush" rel="stylesheet">
 
-    <!-- Responsive CSS -->
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
     
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/magnific-popup.css">
-
-    <link rel="stylesheet" href="css/aos.css">
 
     <link rel="stylesheet" href="css/ionicons.min.css">
 
@@ -49,9 +43,9 @@
             <li class="nav-item active"><a href="/" class="nav-link">หน้าหลัก</a></li>
             <li class="nav-item"><a href="travel" class="nav-link">ท่องเที่ยว</a></li>
             <li class="nav-item"><a href="covid" class="nav-link">Covid - 19</a></li>
-            <li class="nav-item"><a href="gallery" class="nav-link">แกลเลอรี่</a></li>
             <li class="nav-item"><a href="contact" class="nav-link">ติดต่อ</a></li>
-            <li class="nav-item cta"><a href="login" class="nav-link"><span>เข้าสู่ระบบ</span></a></li>
+            <li class="nav-item cta" id="loginbtn" ><a href="login" class="nav-link"><span>เข้าสู่ระบบ</span></a></li>
+            <li class="nav-item cta" id="logoutbtn" ><a class="nav-link"><span>ออกจากระบบ</span></a></li>
           </ul>
         </div>
       </div>
@@ -66,14 +60,14 @@
               <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><strong>ประเทศไทย <br></strong> มีอะไรมากกว่าที่คุณคิด</h1>
               <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">ค้นหาเมืองที่คุณต้องการจะไปเที่ยว ไปกิน ไปช็อป ได้เลย!</p>
               <div class="block-17 my-4">
-                <form action="" method="post" class="d-block d-flex">
+                <form action="travel" method="get" class="d-block d-flex">
                   <div class="fields d-block d-flex">
                     <div class="textfield-search one-third">
-                      <input type="text" class="form-control" placeholder="ค้นหาสถานที่, ร้านอาหาร">
+                      <input name="keyword" id="keyword"type="text" class="form-control" placeholder="ค้นหาสถานที่" value="">
                     </div>
                     <div class="select-wrap one-third">
                       <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                      <select name="" id="" class="form-control" placeholder="Keyword search">
+                      <select name="destination" class="form-control">
                         <option value="กรุงเทพมหานคร">กรุงเทพมหานคร</option>
                         <option value="อำนาจเจริญ">อำนาจเจริญ</option>
                         <option value="อ่างทอง">อ่างทอง</option>
@@ -153,17 +147,26 @@
                         <option value="ยโสธร">ยโสธร</option>
                       </select>
                     </div>
+                    <div class="select-wrap one-third">
+                      <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                      <select name="catagory" class="form-control">
+                        <option value="ALL" selected>ทั้งหมด</option>
+							          <option value="ATTRACTION">สถานที่ท่องเที่ยว</option>
+							          <option value="RESTAURANT">ร้านอาหาร</option>
+							          <option value="SHOP">ช้อปปิ้ง</option> 
+                      </select>
+                    </div>
                   </div>
-                  <input type="submit" class="search-submit btn btn-primary" value="ค้นหา">  
+                  <input type="submit" class="search-submit btn btn-primary">  
                 </form>
               </div>
               <p>ให้เราแนะนำคุณหน่อยไหม</p>
               <p class="browse d-md-flex">
-                <span class="d-flex justify-content-md-center align-items-md-center"><a href="#"><i class="flaticon-tray"></i>ร้านอาหาร</a></span>
-                <span class="d-flex justify-content-md-center align-items-md-center"><a href="#"><i class="flaticon-shopping-basket"></i>ตลาด</a></span>
-                <span class="d-flex justify-content-md-center align-items-md-center"><a href="#"><i class="flaticon-coffee"></i>คาเฟ่</a></span>
-                <span class="d-flex justify-content-md-center align-items-md-center"><a href="#"><i class="flaticon-location"></i>สถานที่ท่องเที่ยว</a></span> 
-                <span class="d-flex justify-content-md-center align-items-md-	center"><a href="#"><i class="flaticon-shopping-bag"></i>ช้อปปิ้ง</a></span>
+                <span class="d-flex justify-content-md-center align-items-md-center"><a href="travel"><i class="flaticon-tray"></i>ร้านอาหาร</a></span>
+                <span class="d-flex justify-content-md-center align-items-md-center"><a href="travel"><i class="flaticon-shopping-basket"></i>ตลาด</a></span>
+                <span class="d-flex justify-content-md-center align-items-md-center"><a href="travel"><i class="flaticon-coffee"></i>คาเฟ่</a></span>
+                <span class="d-flex justify-content-md-center align-items-md-center"><a href="travel"><i class="flaticon-location"></i>สถานที่ท่องเที่ยว</a></span> 
+                <span class="d-flex justify-content-md-center align-items-md-	center"><a href="travel"><i class="flaticon-shopping-bag"></i>ช้อปปิ้ง</a></span>
               </p>
             </div>
           </div>
@@ -218,7 +221,7 @@
           <div class="row justify-content-start mb-5 pb-3">
             <div class="col-md-7 heading-section ftco-animate">
               <span class="subheading">แนะนำ</span>
-              <h2 class="mb-4"><strong>สถานที่ท่องเที่ยว</strong> ยอดนิยม</h2>
+              <h2 class="mb-4"><strong>8 ที่เที่ยวกรุงเทพ</strong> ถ่ายรูปสวย</h2>
             </div>
           </div>
           <div class="row">
@@ -226,75 +229,148 @@
               <div class="destination-slider owl-carousel ftco-animate">
                 <div class="item">
                   <div class="destination">
-                    <a href="#" class="img d-flex justify-content-center align-items-center" style="background-image: url(https://tatapi.tourismthailand.org/tatfs/IMAGE/CustomPOI/Picture/P08013819_1.jpg);">
+                    <a href="travel_single?type=ATTRACTION&id=P03007626" class="img d-flex justify-content-center align-items-center" style="background-image: url(https://www.thairath.co.th/media/dFQROr7oWzulq5FZUEh3MRrERXP2ZCRNt1ty78Z5JDNiHOl2du9iOHIqJeNLXCRgRHB.webp);">
                       <div class="icon d-flex justify-content-center align-items-center">
                         <span class="icon-search2"></span>
                       </div>
                     </a>
                     <div class="text p-3">
-                      <h3><a href="#">ตลาดกลางคืน เยาวราช</a></h3>
+                      <h3><a href="travel_single?type=ATTRACTION&id=P03007626">วัดพระศรีรัตนศาสดาราม</a></h3>
                     </div>
                   </div>
                 </div>
                 <div class="item">
                   <div class="destination">
-                    <a href="#" class="img d-flex justify-content-center align-items-center" style="background-image: url(https://tatapi.tourismthailand.org/tatfs/IMAGE/CustomPOI/Picture/P06000094_1.jpg);">
+                    <a href="travel_single?type=ATTRACTION&id=P03014670" class="img d-flex justify-content-center align-items-center" style="background-image: url(https://cms.dmpcdn.com/travel/2020/02/24/8ef6e340-56dc-11ea-8ded-c572ddfbb31d_original.JPG);">
                       <div class="icon d-flex justify-content-center align-items-center">
                         <span class="icon-search2"></span>
                       </div>
                     </a>
                     <div class="text p-3">
-                      <h3><a href="#">ตลาดนัดสวนจตุจักร</a></h3>
+                      <h3><a href="travel_single?type=ATTRACTION&id=P03014670">ตลาดน้ำขวัญเรียม</a></h3>
                     </div>
                   </div>
                 </div>
                 <div class="item">
                   <div class="destination">
-                    <a href="#" class="img d-flex justify-content-center align-items-center" style="background-image: url(https://tatapi.tourismthailand.org/tatfs/Image/CustomPOI/Picture/P03007495_1.jpeg);">
+                    <a href="travel_single?type=ATTRACTION&id=P03014685" class="img d-flex justify-content-center align-items-center" style="background-image: url(https://cms.dmpcdn.com/travel/2020/02/24/0f931500-56dd-11ea-8ded-c572ddfbb31d_original.JPG);">
                       <div class="icon d-flex justify-content-center align-items-center">
                         <span class="icon-search2"></span>
                       </div>
                     </a>
                     <div class="text p-3">
-                      <h3><a href="#">เสาชิงช้า</a></h3>
+                      <h3><a href="travel_single?type=ATTRACTION&id=P03014685">ตลาดนัดรถไฟ รัชดา</a></h3>
                     </div>
                   </div>
                 </div>
                 <div class="item">
                   <div class="destination">
-                    <a href="#" class="img d-flex justify-content-center align-items-center" style="background-image: url(https://tatapi.tourismthailand.org/tatfs/Image/CustomPOI/Picture/P03013834_1.jpeg);">
+                    <a href="travel_single?type=SHOP&id=P06000094" class="img d-flex justify-content-center align-items-center" style="background-image: url(https://cms.dmpcdn.com/travel/2020/02/24/97d26290-56dd-11ea-b3d8-ab89704a9bb5_original.JPG);">
                       <div class="icon d-flex justify-content-center align-items-center">
                         <span class="icon-search2"></span>
                       </div>
                     </a>
                     <div class="text p-3">
-                      <h3><a href="#">ตึกใบหยกสกาย</a></h3>
+                      <h3><a href="travel_single?type=SHOP&id=P06000094">ตลาดนัดสวนจตุจักร</a></h3>
                     </div>
                   </div>
                 </div>
                 <div class="item">
                   <div class="destination">
-                    <a href="#" class="img d-flex justify-content-center align-items-center" style="background-image: url(https://tatapi.tourismthailand.org/tatfs/IMAGE/CustomPOI/Picture/P03013230_pic1.jpg);">
+                    <a href="travel_single?type=ATTRACTION&id=P03013213" class="img d-flex justify-content-center align-items-center" style="background-image: url(https://cms.dmpcdn.com/travel/2020/02/24/55052e00-56df-11ea-b3d8-ab89704a9bb5_original.JPG);">
                       <div class="icon d-flex justify-content-center align-items-center">
                         <span class="icon-search2"></span>
                       </div>
                     </a>
                     <div class="text p-3">
-                      <h3><a href="#">อนุสาวรีย์ชัยสมรภูมิ</a></h3>
+                      <h3><a href="travel_single?type=ATTRACTION&id=P03013213">พิพิธภัณฑสถานแห่งชาติ พระนคร</a></h3>
                     </div>
                   </div>
                 </div>
                 <div class="item">
                   <div class="destination">
-                    <a href="#" class="img d-flex justify-content-center align-items-center" style="background-image: url(https://tatapi.tourismthailand.org/tatfs/Image/CustomPOI/Picture/P03013218_1.jpeg);">
+                    <a href="travel_single?type=ATTRACTION&id=P03013490" class="img d-flex justify-content-center align-items-center" style="background-image: url(http://122.155.197.111:8080/bkkConnect/download?&file=image/b037943c-2078-407b-b3b8-b6f2dd9af6791558944910493.jpg);">
                       <div class="icon d-flex justify-content-center align-items-center">
                         <span class="icon-search2"></span>
                       </div>
                     </a>
                     <div class="text p-3">
-                      <h3><a href="#">วัดอรุณราชวรารามราชวรมหาวิหาร</a></h3>
+                      <h3><a href="travel_single?type=ATTRACTION&id=P03013490">พิพิธภัณฑ์บ้านจิม ทอมป์สัน</a></h3>
                     </div>
                   </div>
+                </div>
+                <div class="item">
+                  <div class="destination">
+                    <a href="travel_single?type=ATTRACTION&id=P03013226" class="img d-flex justify-content-center align-items-center" style="background-image: url(https://www.pullmanbangkokkingpower.com/wp-content/uploads/sites/53/2018/03/Wat-Benchamabophit.jpg);">
+                      <div class="icon d-flex justify-content-center align-items-center">
+                        <span class="icon-search2"></span>
+                      </div>
+                    </a>
+                    <div class="text p-3">
+                      <h3><a href="travel_single?type=ATTRACTION&id=P03013226">วัดเบญจมบพิตรดุสิตวนารามราชวรวิหาร</a></h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="destination">
+                    <a href="travel_single?type=ATTRACTION&id=P03013833" class="img d-flex justify-content-center align-items-center" style="background-image: url(https://pbs.twimg.com/media/Ea6ya1yUYAAbNuW.jpg);">
+                      <div class="icon d-flex justify-content-center align-items-center">
+                        <span class="icon-search2"></span>
+                      </div>
+                    </a>
+                    <div class="text p-3">
+                      <h3><a href="travel_single?type=ATTRACTION&id=P03013833">ศูนย์วิทยาศาสตร์เพื่อการศึกษา (ท้องฟ้าจำลอง)</a></h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="ftco-section bg-light">
+        <div class="container">
+          <div class="row justify-content-start mb-5 pb-3">
+            <div class="col-md-7 heading-section ftco-animate">
+              <span class="subheading">แนะนำ</span>
+              <h2><strong>4 ร้านอาหารห้ามพลาด</strong> ในกรุงเทพ</h2>
+            </div>
+          </div>
+          <div class="row d-flex">
+            <div class="col-md-3 d-flex ftco-animate">
+              <div class="blog-entry align-self-stretch">
+                <a href="travel_single?type=RESTAURANT&id=P08000640" class="block-20" style="background-image: url('https://api.tourismthailand.org/upload/live/content_place/1-4301.png');">
+                </a>
+                <div class="text p-4 d-block">
+                  <h3 class="heading mt-3"><a href="travel_single?type=RESTAURANT&id=P08000640">เรือนมัลลิการ์ &emsp;&emsp;&emsp;&emsp;&emsp;</a></h3>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 d-flex ftco-animate">
+              <div class="blog-entry align-self-stretch">
+                <a href="travel_single?type=RESTAURANT&id=P08000909" class="block-20" style="background-image: url('https://lh3.googleusercontent.com/proxy/3cLBAfBrACRiil3Hoc8mJLGoXr1pT1lvkWGYc0cALSOp1nAmDxierNtFi5bcDVGf6c3_prZR4j1UPccwsylAS0eCQYJezWYnWWxJlcTP-b-KJTuquCfpg1muoUc-loYCf7edi4Yfa4AKpa0h-yDNjp_R4BIVpLtr6HCFfWbbmMStheoLtddXprvvehrYHdvcLPj6c6xJQX5TYBysKLkS4ceBwVzrKHBX2NmHgirI4FVtOvREXyUHQ4Cf8ybFf2aDvo2EZ5ObppKO9z7XDJ_ROijyHsbs_p_SkogT-vFseJpAx4H1RrXxQRgbFmyAXcpUWao0ojRYt6eCX6hx54jyZmGRimvbWJurvzGZz4udyxDHzasFyJKVqSjMQIYdMr9OxnI0q6Rz1-3qH721_m8o-ZXWlIz6BFyE8S7G2yFKnYEz0VVEsfbN0IEhUQFOy3iSMivoSp6ACaG5CoYR25cHDeuTegG5_MMYdPuVgqFa1XaQJu2eyACOYEvk-i_o313LnAu-AZUiiGIHLmxv6OwZT07gtNQ8F6N0yWf5eJyHK_2GsFGgHGTgzhSgHaM01A_LNVkCkCn3CMQDd8lIf78Dk0KlaGjFckFLAOl97cMRIMRS_K3odUtDfHTiCmH9fhE83NzpHxPcKHZGWeMwiGQ2dxeM4MCU-3-TKIDxRzeqEfjcYGDLRS6YTsj8BfZ__8eq435ggSVusQt46xke8JJP_-VF95nfW71T93qQo3VazoD2ynACDZ6cAEztekSEaoMYhJwAnoWt1JsVnEBjTlnhUl0DS4Y3n8w3tsKzeiF66qe32uT31wSuKo5XIHuBmB8oc1mUrmnJpqEggXQIla7CE9QsZYbaJSsZ9xa7pScMnzlzxas');">
+                </a>
+                <div class="text p-4 d-block">
+                  <h3 class="heading mt-3"><a href="travel_single?type=RESTAURANT&id=P08000909">ไฟร์เพลส กริลล์ แอนด์ บาร์</a></h3>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 d-flex ftco-animate">
+              <div class="blog-entry align-self-stretch">
+                <a href="travel_single?type=RESTAURANT&id=P08000914" class="block-20" style="background-image: url('https://ed.edtfiles-media.com/static-cache/resize-cache/790x528/ud/images/1/125/373488/DSC02884_Cover.jpg');">
+                </a>
+                <div class="text p-4 d-block">
+                  <h3 class="heading mt-3"><a href="travel_single?type=RESTAURANT&id=P08000914">อิษยา สยามมิส คลับ &emsp;&emsp;</a></h3>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 d-flex ftco-animate">
+              <div class="blog-entry align-self-stretch">
+                <a href="travel_single?type=RESTAURANT&id=P08000920" class="block-20" style="background-image: url('https://bk.asia-city.com/sites/default/files/styles/og_fb/public/sushi_masato3.jpg?itok=LQVQVQN4');">
+                </a>
+                <div class="text p-4 d-block">
+                  <h3 class="heading mt-3"><a href="travel_single?type=RESTAURANT&id=P08000920">ซูชิ มาซาโตะ &emsp;&emsp;&emsp;&emsp;&emsp;</a></h3>
                 </div>
               </div>
             </div>
@@ -321,8 +397,6 @@
   
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-migrate-3.0.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.easing.1.3.js"></script>
     <script src="js/jquery.waypoints.min.js"></script>
     <script src="js/jquery.stellar.min.js"></script>
@@ -331,11 +405,13 @@
     <script src="js/aos.js"></script>
     <script src="js/jquery.animateNumber.min.js"></script>
     <script src="js/bootstrap-datepicker.js"></script>
-    <script src="js/jquery.timepicker.min.js"></script>
     <script src="js/scrollax.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-    <script src="js/google-map.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-firestore.js"></script>
+    <script src="js/authen.js"></script>
       
     </body>
   </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
   <head>
     <!-- Title -->
     <title >Wantravel</title>
@@ -12,16 +12,18 @@
     <link href="https://covid19.th-stat.com/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://covid19.th-stat.com/vendor/semantic_ui/semantic.min.css" rel="stylesheet" type="text/css">
     <link href="https://covid19.th-stat.com/script/covid_19/style.css?v=8" rel="stylesheet">
+    <script src="https://covid19.th-stat.com/vendor/jquery/jquery.min.js"></script>
     
        
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alex+Brush" rel="stylesheet">
+
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
     
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/magnific-popup.css">
-
-    <link rel="stylesheet" href="css/aos.css">
 
     <link rel="stylesheet" href="css/ionicons.min.css">
 
@@ -33,7 +35,7 @@
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
     
-    <script src="https://covid19.th-stat.com/vendor/jquery/jquery.min.js"></script>
+    
     <style>
       section.main-body {
         padding: 0;
@@ -57,7 +59,6 @@
           <li class="nav-item"><a href="/" class="nav-link">หน้าหลัก</a></li>
           <li class="nav-item"><a href="travel" class="nav-link">ท่องเที่ยว</a></li>
           <li class="nav-item active"><a href="covid" class="nav-link">Covid - 19</a></li>
-          <li class="nav-item"><a href="gallery" class="nav-link">แกลเลอรี่</a></li>
           <li class="nav-item"><a href="contact" class="nav-link">ติดต่อ</a></li>
           <li class="nav-item cta"><a href="login" class="nav-link"><span>เข้าสู่ระบบ</span></a></li>
         </ul>
@@ -66,7 +67,7 @@
   </nav>
     <!-- END nav -->
     
-    <div class="hero-wrap js-fullheight" style="background-image: url('images/bg_3.jpg');">
+    <div class="hero-wrap js-fullheight" style="background-image: url('images/bg_6.jpg');">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
@@ -142,8 +143,6 @@
 
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-migrate-3.0.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.easing.1.3.js"></script>
     <script src="js/jquery.waypoints.min.js"></script>
     <script src="js/jquery.stellar.min.js"></script>
@@ -152,10 +151,7 @@
     <script src="js/aos.js"></script>
     <script src="js/jquery.animateNumber.min.js"></script>
     <script src="js/bootstrap-datepicker.js"></script>
-    <script src="js/jquery.timepicker.min.js"></script>
     <script src="js/scrollax.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-    <script src="js/google-map.js"></script>
     <script src="js/main.js"></script>
 
     <script>
@@ -168,7 +164,7 @@
           document.getElementById("Deaths").innerHTML = JSON.stringify(result.Deaths);
           document.getElementById("NewConfirmed").innerHTML = "[+ "+JSON.stringify(result.NewConfirmed)+"]";
           document.getElementById("NewRecovered").innerHTML = "[+ "+JSON.stringify(result.NewRecovered)+"]";
-          document.getElementById("NewHospitalized").innerHTML = "[+ "+JSON.stringify(result.NewHospitalized)+"]";
+          document.getElementById("NewHospitalized").innerHTML = "[ "+JSON.stringify(result.NewHospitalized)+"]";
           document.getElementById("NewDeaths").innerHTML = "[+ "+JSON.stringify(result.NewDeaths)+"]";
           document.getElementById("UpdateDate").innerHTML = "อัพเดตข้อมูลล่าสุด: "+JSON.stringify(result.UpdateDate).slice(1,-1);
         });
